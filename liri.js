@@ -1,9 +1,9 @@
 //store dependencies as variables.
-var keys = require('keys.jsx');
+//var keys = require('keys.jsx');
 var twitter = require("twitter");
 var spotify = require("spotify");
 var request = require("request");
-var fs = require('fs');
+var fs = require('file-system');
 
 //capture user input, and inform user of what to type in.
 console.log("Type my-tweets , spotify-this-song , movie-this , or do-what-it-says to get started!");
@@ -19,9 +19,9 @@ function theGreatSwitch(){
 	//action statement, switch statement to declare what action to execute.
 	switch(userCommand){
 
-		case 'my-tweets':
+		/*case 'my-tweets':
 		fetchTweets();
-		break;
+		break;*/
 
 		case 'spotify-this-song':
 		spotifyMe();
@@ -38,7 +38,7 @@ function theGreatSwitch(){
 	}
 };
 //functions/options
-function fetchTweets(){
+/*function fetchTweets(){
 	console.log("Tweets headed your way!");
 	//new variable for instance of twitter, load keys from imported keys.js
 	var client = new twitter({
@@ -46,7 +46,8 @@ function fetchTweets(){
 		consumer_secret: keys.twitterKeys.consumer_secret,
 		access_token_key: keys.twitterKeys.access_token_key,
 		access_token_secret: keys.twitterKeys.access_token_secret
-	});
+    });
+    
 
 	//parameters for twitter function.
 	var parameters = {
@@ -65,7 +66,7 @@ function fetchTweets(){
 	    };
 	});
 };//end fetchTweets;
-
+*/
 function spotifyMe(){
 	console.log("Music for DAYS!");
 
@@ -142,5 +143,5 @@ function followTheTextbook(){
     });//end readfile
 
 };//end followTheTextbook
-fno
+
 theGreatSwitch();
